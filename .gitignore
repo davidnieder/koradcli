@@ -1,0 +1,6 @@
+*.pyc
+venv/
+build/
+dist/
+koradcli.egg-info/
+record.txt
