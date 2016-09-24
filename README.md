@@ -3,7 +3,7 @@ Command-line interface for the Korad KA3005P power supply.
 Compatible Korad or Velleman devices probably work but are not tested.
 
 ### Install with python-setuptools
-> python2 setup.py
+> python2 setup.py install
 
 ### Example usage
 ```
@@ -32,15 +32,15 @@ Options:
   --help           Show this message and exit.
 
 Commands:
-  current  Get/Set current target/real value
-  load     Load values from device memory
+  current  Get/Set current target/real value.
+  load     Load values from device memory.
   model    Show the korad model string.
   ocp      Turn over-current-protection on/off.
   output   Turn power supply output on/off.
   ovp      Turn over-voltage-protection on/off.
-  save     Save present values to device memory
+  save     Save present values to device memory.
   status   Show the present status of the power supply.
-  voltage  Get/Set voltage target/real value
+  voltage  Get/Set voltage target/real value.
 ```
 
 ### Made with

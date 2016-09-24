@@ -63,7 +63,7 @@ def ovp(state, read):
         echo('ovp: {}'.format(korad_device.ovp))
 
 @korad.command(help='Turn over-current-protection on/off.')
-@click.option('--read', is_flag=True, help='Show whether device is in ocp mode or not')
+@click.option('--read', is_flag=True, help='Show whether device is in ocp mode or not.')
 @click.argument('state', required=False, type=OnOffChoice(), metavar='[on|off]')
 def ocp(state, read):
     if state:
@@ -71,8 +71,8 @@ def ocp(state, read):
     if read or not state:
         echo('ocp: {}'.format(korad_device.ocp))
 
-@korad.command(help='Get/Set current target/real value')
-@click.option('--read', is_flag=True, help='Show present output current')
+@korad.command(help='Get/Set current target/real value.')
+@click.option('--read', is_flag=True, help='Show present output current.')
 @click.argument('current', required=False, type=float)
 def current(current, read):
     if current:
@@ -80,8 +80,8 @@ def current(current, read):
     if read or not current:
         echo('Set: {0}, Actual: {1}'.format(korad_device.current_set, korad_device.current_actual))
 
-@korad.command(help='Get/Set voltage target/real value')
-@click.option('--read', is_flag=True, help='Show presen output voltage')
+@korad.command(help='Get/Set voltage target/real value.')
+@click.option('--read', is_flag=True, help='Show presen output voltage.')
 @click.argument('voltage', required=False, type=float)
 def voltage(voltage, read):
     if voltage:
@@ -89,12 +89,12 @@ def voltage(voltage, read):
     if read or not voltage:
         echo('Set: {0}, Actual: {1}'.format(korad_device.voltage_set, korad_device.voltage_actual))
 
-@korad.command(help='Save present values to device memory')
-@click.option('-m', required=True, type=click.IntRange(1,5), help='Number of memory bank to save to')
+@korad.command(help='Save present values to device memory.')
+@click.option('-m', required=True, type=click.IntRange(1,5), help='Number of memory bank to save to.')
 def save(m):
     korad_device.save_to_memory(m)
 
-@korad.command(help='Load values from device memory')
-@click.option('-m', required=True, type=click.IntRange(1,5), help='Number of memory bank to load from')
+@korad.command(help='Load values from device memory.')
+@click.option('-m', required=True, type=click.IntRange(1,5), help='Number of memory bank to load from.')
 def load(m):
     korad_device.recall_from_memory(m)
